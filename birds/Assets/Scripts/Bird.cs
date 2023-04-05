@@ -10,6 +10,22 @@ public class Bird : MonoBehaviour
         GetComponent<Rigidbody2D>().isKinematic = true;
     }
 
+    void OnMouseDown()
+    {
+        GetComponent<SpriteRenderer>().color = Color.blue;
+    }
+
+    void OnMouseUp()
+    {
+        GetComponent<SpriteRenderer>().color = Color.white;
+    }
+
+    void OnMouseDrag()
+    {
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = new Vector3(mousePosition.x, mousePosition.y, transform.position.z);
+    }
+
     // Update is called once per frame
     void Update()
     {
