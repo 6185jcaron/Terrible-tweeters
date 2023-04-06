@@ -618,6 +618,7 @@ GameObject:
   - component: {fileID: 934769505}
   - component: {fileID: 934769504}
   - component: {fileID: 934769503}
+  - component: {fileID: 934769507}
   m_Layer: 0
   m_Name: MonsterPurpleOpen
   m_TagString: Untagged
@@ -755,6 +756,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &934769507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934769502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8e5f0624d9dd94b9e99fa46c2f4b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &976971096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,7 +1422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b02f23943a3faf545b1e506107ed3275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _launchForce: 800
+  _launchForce: 1000
 --- !u!1 &1691032713
 GameObject:
   m_ObjectHideFlags: 0
