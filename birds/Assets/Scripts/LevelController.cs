@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
     Monster[] _monsters;
+    [SerializeField] string _nextLevelName;
     
     void OnEnable()
     {
@@ -21,7 +23,7 @@ public class LevelController : MonoBehaviour
 
     void GoToNextLevel()
     {
-        throw new NotImplementedException();
+        SceneManager.LoadScene(_nextLevelName);
     }
 
     bool MonstersAreAllDead()
