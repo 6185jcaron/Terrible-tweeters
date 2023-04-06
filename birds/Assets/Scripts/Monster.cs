@@ -11,7 +11,8 @@ public class Monster : MonoBehaviour
     {
         if (ShouldDieFromCollision(collision))
         {
-            Die();
+            //Die();
+            StartCoroutine(ResetAfterDelay1());
         }
       
     }
@@ -28,10 +29,22 @@ public class Monster : MonoBehaviour
         return false;
     }
 
-    void Die()
+   /* void OnCollisionEnter2D(Collision2D collision)
+    {
+        StartCoroutine(ResetAfterDelay1());
+    } */
+    private IEnumerator ResetAfterDelay1()
+    {
+        _particleSystem.Play();
+        yield return new WaitForSeconds(1);
+        GetComponent<SpriteRenderer>().sprite = _deadSprite;
+        gameObject.SetActive(false);
+    }
+    /*void Die()
     {
         GetComponent<SpriteRenderer>().sprite = _deadSprite;
         _particleSystem.Play();
-        //gameObject.SetActive(false);
-    }
+        yield return new WaitForSeconds(3);
+        gameObject.SetActive(false);
+    } */
 }
