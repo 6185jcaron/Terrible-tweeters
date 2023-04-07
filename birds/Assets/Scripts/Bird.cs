@@ -9,6 +9,9 @@ public class Bird : MonoBehaviour
 
     Vector2 _startPosition;
     Rigidbody2D _rigidbody2D;
+
+    public bool IsDragging { get; private set; }
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -23,6 +26,7 @@ public class Bird : MonoBehaviour
     void OnMouseDown()
     {
         GetComponent<SpriteRenderer>().color = Color.blue;
+        IsDragging = true;
     }
 
     void OnMouseUp()
@@ -34,6 +38,7 @@ public class Bird : MonoBehaviour
 
         _rigidbody2D.isKinematic = false;
         _rigidbody2D.AddForce(direction * _launchForce);
+        IsDragging = false;
 
     }
 

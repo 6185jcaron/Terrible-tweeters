@@ -17,6 +17,15 @@ public class DragLine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _lineRenderer.SetPosition(1, _bird.transform.position);
+        if (_bird.IsDragging)
+        {
+            _lineRenderer.enabled = true;
+            _lineRenderer.SetPosition(1, _bird.transform.position);
+        }
+        else
+        {
+            _lineRenderer.enabled = false;
+        }
+       
     }
 }
