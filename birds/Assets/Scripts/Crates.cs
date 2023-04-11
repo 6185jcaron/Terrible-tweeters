@@ -9,7 +9,8 @@ public class Crates : MonoBehaviour
     {
         if(collision.relativeVelocity.magnitude > 5f)
         {
-            var clip = _clips[UnityEngine.Random.Range(0, _clips.Length)];
+            int index = UnityEngine.Random.Range(0, _clips.Length);
+            AudioClip clip = _clips[index];
             GetComponent<AudioSource>().PlayOneShot(clip);
         }
         else
