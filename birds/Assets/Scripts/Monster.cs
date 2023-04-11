@@ -21,13 +21,21 @@ public class Monster : MonoBehaviour
 
     bool _hasDied;
 
+    private void OnMouseDown()
+    {
+        GetComponent<AudioSource>().Play();
+    }
+
     IEnumerator Start()
     {
         
         {
             float delay = UnityEngine.Random.Range(5, 30);
             yield return new WaitForSeconds(delay);
-            GetComponent<AudioSource>().Play();
+            if (_hasDied == false)
+            {
+                GetComponent<AudioSource>().Play();
+            }
         }
         
     }
