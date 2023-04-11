@@ -11,7 +11,7 @@ public class Monster : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (ShouldDieFromCollision(collision))
+        while (_hasDied == true)
         {
             //Die();
             StartCoroutine(ResetAfterDelay1());
@@ -19,8 +19,23 @@ public class Monster : MonoBehaviour
       
     }
 
+    bool _hasDied;
+
+    IEnumerator Start()
+    {
+        
+        {
+            float delay = UnityEngine.Random.Range(5, 30);
+            yield return new WaitForSeconds(delay);
+            GetComponent<AudioSource>().Play();
+        }
+        
+    }
+
     bool ShouldDieFromCollision(Collision2D collision)
     {
+        if (_hasDied)
+            return false;
         Bird bird = collision.gameObject.GetComponent<Bird>();
         if (bird != null)
             return true;
@@ -41,6 +56,7 @@ public class Monster : MonoBehaviour
         yield return new WaitForSeconds(1);
         GetComponent<SpriteRenderer>().sprite = _deadSprite;
         gameObject.SetActive(false);
+        _hasDied = true;
     }
     /*void Die()
     {
