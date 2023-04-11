@@ -88,6 +88,7 @@ AudioMixerController:
     - b6d3c900ed177564ea84c3fd7e2cdea9
     - 4bec2cdc575029140b406f9d52d5e2ed
     - 1b63211bbeb5d614c8dba6e77aebdd6a
+    - f2d264f4ae9a3d542bc706a04de2c541
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -104,6 +105,7 @@ AudioMixerGroupController:
   - {fileID: -4390180424789345541}
   - {fileID: -6327768908261601850}
   - {fileID: 1707868042358052711}
+  - {fileID: 8645259459966264048}
   m_Volume: b2aff1018eff8164fb50777b9be1d33c
   m_Pitch: fc87738dccb76ef41bc6a56c40e86cdd
   m_Send: 00000000000000000000000000000000
@@ -155,6 +157,39 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -7574777595780283268}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &1860540387703496769
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 44eef6027a359e8429ca6dd963e0eb73
+  m_EffectName: Attenuation
+  m_MixLevel: 6534ba6a49913cd4d8b762c70429131c
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!243 &8645259459966264048
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Crates
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: f2d264f4ae9a3d542bc706a04de2c541
+  m_Children: []
+  m_Volume: 56dd0d88489537b4d80afb6cdc86368c
+  m_Pitch: fadff22224701f041918d3d2298d14f2
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 1860540387703496769}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
