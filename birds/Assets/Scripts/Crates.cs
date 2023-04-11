@@ -10,5 +10,9 @@ public class Crates : MonoBehaviour
         {
             GetComponent<AudioSource>().Play();
         }
+        else
+        {
+            Debug.Log("too slow" + collision.relativeVelocity.magnitude);
+        }
     }
 }
