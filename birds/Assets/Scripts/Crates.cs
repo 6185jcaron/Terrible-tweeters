@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Crates : MonoBehaviour
 {
+    [SerializeField] AudioClip[] _clips;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.relativeVelocity.magnitude > 5f)
         {
-            GetComponent<AudioSource>().Play();
+            var clip = _clips[UnityEngine.Random.Range(0, _clips.Length)];
+            GetComponent<AudioSource>().PlayOneShot(clip);
         }
         else
         {
