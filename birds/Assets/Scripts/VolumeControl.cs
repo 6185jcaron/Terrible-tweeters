@@ -22,10 +22,15 @@ public class VolumeControl : MonoBehaviour
         _mixer.SetFloat(_volumeParameter, Mathf.Log10(value) * _multiplier);
     }
 
+    private void OnDisable()
+    {
+        PlayerPrefs.SetFloat(_volumeParameter, _slider.value);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _slider.value = PlayerPrefs.GetFloat(_volumeParameter, _slider.value);
     }
 
     // Update is called once per frame
