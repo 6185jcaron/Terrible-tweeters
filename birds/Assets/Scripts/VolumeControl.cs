@@ -12,6 +12,7 @@ public class VolumeControl : MonoBehaviour
     [SerializeField] Slider _slider;
     [SerializeField] float _multiplier = 30f;
     [SerializeField] private Toggle _toggle;
+    private bool _disableToggleEvent;
 
     private void Awake()
     {
@@ -21,6 +22,8 @@ public class VolumeControl : MonoBehaviour
 
     private void HandleToggleValueChanged(bool enableSound)
     {
+        if (_disableToggleEvent)
+            return;
         if (enableSound)
             _slider.value = _slider.maxValue;
         else
@@ -30,6 +33,9 @@ public class VolumeControl : MonoBehaviour
     private void HandleSliderValueChanged(float value)
     {
         _mixer.SetFloat(_volumeParameter, Mathf.Log10(value) * _multiplier);
+        _disableToggleEvent = true;
+        _toggle.isOn = _slider.value > _slider.minValue;
+        _disableToggleEvent = false;
     }
 
     private void OnDisable()
