@@ -9582,7 +9582,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.9
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9601,7 +9601,7 @@ MonoBehaviour:
   _volumeParameter: Music Volume
   _mixer: {fileID: 24100000, guid: 73a74dd8b9547ca4098a39babd5adbd7, type: 2}
   _slider: {fileID: 1979728581}
-  _multiplier: 0
+  _multiplier: 30
 --- !u!1 &2006768499
 GameObject:
   m_ObjectHideFlags: 0
