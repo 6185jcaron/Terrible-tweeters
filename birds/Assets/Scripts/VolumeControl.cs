@@ -10,7 +10,7 @@ public class VolumeControl : MonoBehaviour
     [SerializeField] string _volumeParameter = "Music Volume";
     [SerializeField] AudioMixer _mixer;
     [SerializeField] Slider _slider;
-    [SerializeField] float _multiplier;
+    [SerializeField] float _multiplier = 30f;
 
     private void Awake()
     {
