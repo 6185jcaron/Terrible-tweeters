@@ -2644,7 +2644,7 @@ GameObject:
   - component: {fileID: 1084889910}
   - component: {fileID: 1084889909}
   m_Layer: 5
-  m_Name: Player
+  m_Name: SFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2686,7 +2686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb19b55548a5ce14d8e66447c5aecb2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _volumeParameter: Player Volume
+  _volumeParameter: SFX Volume
   _mixer: {fileID: 24100000, guid: 73a74dd8b9547ca4098a39babd5adbd7, type: 2}
   _slider: {fileID: 1084889910}
   _multiplier: 30
